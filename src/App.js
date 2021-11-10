@@ -6,8 +6,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/HomePage";
 import Profile from "./pages/ProfilePage";
 import CreateTodo from "./pages/createtodo";
-import { Layout } from "antd";
-import { Content } from "antd/lib/layout/layout";
 
 function App() {
   return (

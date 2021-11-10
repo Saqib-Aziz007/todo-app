@@ -1,5 +1,6 @@
 import { Form, Input, Button, Card } from "antd";
 import { useHistory } from "react-router";
+import { UserOutlined, LockOutlined } from "@ant-design/icons";
 
 const Login = () => {
   const history = useHistory();
@@ -31,21 +32,24 @@ const Login = () => {
         autoComplete="off"
       >
         <Form.Item
-          label="Username"
           name="username"
           rules={[{ required: true, message: "Please input your username!" }]}
         >
-          <Input />
+          <Input
+            prefix={<UserOutlined className="site-form-item-icon" />}
+            placeholder="Username"
+          />
         </Form.Item>
-
         <Form.Item
-          label="Password"
           name="password"
           rules={[{ required: true, message: "Please input your password!" }]}
         >
-          <Input.Password />
+          <Input
+            prefix={<LockOutlined className="site-form-item-icon" />}
+            type="password"
+            placeholder="Password"
+          />
         </Form.Item>
-
         {/* <Form.Item
           name="remember"
           valuePropName="checked"
